@@ -9,12 +9,4 @@
 
 <hr />
 
-<div class="container">
-    <h3>Available Boards</h3>
-    <ul class="list-group">
-        @foreach (var board in BoardApp.Models.Repository.Boards)
-        {
-            <li class="list-group-item">@board.ToString()</li>
-        }
-    </ul>
-</div>
+<p><a asp-action="AddBoard">Add a board</a></p>

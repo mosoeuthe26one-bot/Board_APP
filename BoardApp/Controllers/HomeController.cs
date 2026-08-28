@@ -18,6 +18,7 @@ public class HomeController : Controller
         return View();
     }
 
+    [HttpGet]
     public ViewResult AddBoard()
     {
         //
@@ -32,21 +33,42 @@ public class HomeController : Controller
     } // end method
 
     [HttpPost]
-    public IActionResult AddBoard(Board newBoard)
+    public ViewResult AddBoard(Board board)
     {
         //
-        //Name             : ViewResult AddBoard(Board newBoard)
-        //Purpose          : Receives data from the AddBoard form,
-        //                   adds the new board to the repository,
-        //                   and redirects to the Home page.
+        //Name             : ViewResult AddBoard(Board board)
+        //Purpose          : Receives data from the AddBoard form. If the
+        //                   submitted data is valid, adds the new board to
+        //                   the repository and shows a confirmation view.
+        //                   Otherwise redisplays the form with the user's
+        //                   errors shown.
         //Re-use           : None
-        //Input Parameters : Board newBoard
+        //Input Parameters : Board board
         //                   - the board object created by the model binder
-        //                   from the submitted form data.
-        //Output Type      : ViewResult (redirecting to Index)
+        //                     from the submitted form data
+        //Output Type      : ViewResult
+        //                   - either the BoardAdded confirmation view, or
+        //                     the AddBoard form redisplayed with errors
         //
-        Repository.AddBoard(newBoard);
-        return RedirectToAction("Index");
+        if (ModelState.IsValid)
+        {
+            Repository.AddBoard(board);
+            return View("BoardAdded", board);
+        }
+        return View();
+} // end method
+
+    public ViewResult ListBoards()
+    {
+        //
+        //Name             : ViewResult ListBoards()
+        //Purpose          : Displays every board currently in the repository
+        //Re-use           : None
+        //Input Parameters : None
+        //Output Type      : ViewResult
+        //                   - the view listing all boards
+        //
+        return View(Repository.Boards);
     } // end method
 
     public IActionResult Privacy()

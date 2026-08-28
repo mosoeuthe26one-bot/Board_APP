@@ -1,0 +1,32 @@
+@model IEnumerable<BoardApp.Models.Board>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>All boards</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Board code</th>
+            <th>Manufacturer</th>
+            <th>Model</th>
+            <th>Flash (KB)</th>
+            <th>Price</th>
+        </tr>
+        @foreach (BoardApp.Models.Board b in Model)
+        {
+            <tr>
+                <td>@b.BoardCode</td>
+                <td>@b.Make</td>
+                <td>@b.Model</td>
+                <td>@b.FlashKb</td>
+                <td>@b.Price</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

@@ -6,11 +6,16 @@
 //                   flash size and price.
 
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace BoardApp.Models
 {
     public class Board
     {
+        [Key]
+        [Required(ErrorMessage = "The board code is required.")]
+        [StringLength(4, MinimumLength = 4, ErrorMessage = "The board code must have a length of 4.")]
+        [Display(Name = "Board code")]
         public string BoardCode
         {
             //
@@ -28,6 +33,8 @@ namespace BoardApp.Models
             get; set;
         } // end property
 
+        [Required(ErrorMessage = "The board manufacturer is required.")]
+        [Display(Name = "Manufacturer")]
         public string Make
         {
             //
@@ -45,6 +52,8 @@ namespace BoardApp.Models
             get; set;
         } // end property
 
+        [Required(ErrorMessage = "The board model is required.")]
+        [Display(Name = "Model")]
         public string Model
         {
             //
@@ -62,7 +71,10 @@ namespace BoardApp.Models
             get; set;
         } // end property
 
-        public int FlashKb
+        [Required(ErrorMessage = "The flash size is required.")]
+        [Range(16, 4096, ErrorMessage = "The flash size must be between 16 and 4096 inclusive.")]
+        [Display(Name = "Flash (KB)")]
+        public int? FlashKb
         {
             //
             //Name            : property int FlashKb
@@ -79,7 +91,11 @@ namespace BoardApp.Models
             get; set;
         } // end property
 
-        public decimal Price
+        [Required(ErrorMessage = "The price is required.")]
+        [Range(1.00, 5000.00, ErrorMessage = "The price must be between R1.00 and R5000.00 inclusive.")]
+        [DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = false)]
+        [Display(Name = "Price (R)")]
+        public decimal? Price
         {
             //
             //Name            : property decimal Price
