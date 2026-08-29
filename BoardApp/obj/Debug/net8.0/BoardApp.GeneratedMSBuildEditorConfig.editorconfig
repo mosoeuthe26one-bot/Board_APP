@@ -18,6 +18,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /workspaces/Board_APP/BoardApp
 build_property._RazorSourceGeneratorDebug = 
 
+[/workspaces/Board_APP/BoardApp/Views/Board/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmQvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/Board_APP/BoardApp/Views/Board/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmQvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/workspaces/Board_APP/BoardApp/Views/Home/AddBoard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BZGRCb2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,5 +1,5 @@
-// Programmer name : Rethabile
-// Student nr      : <YOUR STUDENT NUMBER HERE>
+// Programmer name : Zenande Silinga; Phiwe Bunu; Rethabile Mosoeu
+// Student nr      : 225094388;225024254;222078921
 // Assignment nr   : Practical Worksheet 1
 // Purpose         : This class represents a microcontroller development
 //                   board, storing its board code, manufacturer, model,
@@ -7,6 +7,8 @@
 
 using System;
 using System.ComponentModel.DataAnnotations;
+using BoardApp.Infrastructure;
+
 
 namespace BoardApp.Models
 {
@@ -72,7 +74,8 @@ namespace BoardApp.Models
         } // end property
 
         [Required(ErrorMessage = "The flash size is required.")]
-        [Range(16, 4096, ErrorMessage = "The flash size must be between 16 and 4096 inclusive.")]
+        // [Range(16, 4096, ErrorMessage = "The flash size must be between 16 and 4096 inclusive.")]
+        [VerifyFlashSize]
         [Display(Name = "Flash (KB)")]
         public int? FlashKb
         {
