@@ -9,10 +9,6 @@
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
-      "Id": "/workspaces/Board_APP/BoardApp/wwwroot/css/styles.css",
-      "PackagePath": "staticwebassets/css/styles.css"
-    },
-    {
       "Id": "/workspaces/Board_APP/BoardApp/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },

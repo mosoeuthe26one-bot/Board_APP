@@ -1,6 +1,6 @@
-// Programmer name : Rethabile
-// Student nr      : <YOUR STUDENT NUMBER HERE>
-// Assignment nr   : Practical Worksheet 3
+/// Programmer name : Zenande Silinga; Phiwe Bunu; Rethabile Mosoeu
+// Student nr      : 225094388;225024254;222078921
+// Assignment nr   : Practical Assessment 1
 // Purpose         : Custom validation attribute that checks a flash
 //                   size value against the fixed list of real-world
 //                   flash sizes, since [Range] cannot express

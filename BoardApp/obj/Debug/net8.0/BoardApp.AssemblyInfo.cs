@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BoardApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6834f7877500695c3a17278146f7f58cd738fcfe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b625305f1e0e1000be83daa599a4acd8c1b142fd")]
 [assembly: System.Reflection.AssemblyProductAttribute("BoardApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BoardApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

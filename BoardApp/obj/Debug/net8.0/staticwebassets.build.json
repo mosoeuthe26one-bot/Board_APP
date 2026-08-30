@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wW9Awlh+nboh6hmKhEm2TOVIxnxc65M0eOvUp2ByCbU=",
+  "Hash": "k/rokH5413FcoEe2tH/BMf17lbpf8vn9j5w305HDUtk=",
   "Source": "BoardApp",
   "BasePath": "_content/BoardApp",
   "Mode": "Default",
@@ -72,25 +72,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
-    },
-    {
-      "Identity": "/workspaces/Board_APP/BoardApp/wwwroot/css/styles.css",
-      "SourceId": "BoardApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "/workspaces/Board_APP/BoardApp/wwwroot/",
-      "BasePath": "_content/BoardApp",
-      "RelativePath": "css/styles.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/styles.css"
     },
     {
       "Identity": "/workspaces/Board_APP/BoardApp/wwwroot/favicon.ico",

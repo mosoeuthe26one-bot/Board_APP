@@ -1,10 +1,11 @@
 // Programmer name : Zenande Silinga; Phiwe Bunu; Rethabile Mosoeu
 // Student nr      : 225094388;225024254;222078921
-// Assignment nr   : Practical Worksheet 1
+// Assignment nr   : Practical Assessment 1
 // Purpose         : This class provides temporary in-memory storage for
 //                   Board objects, acting as a stand-in repository.
 
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BoardApp.Models
 {
@@ -69,6 +70,58 @@ namespace BoardApp.Models
             //Output Type      : None
             //
             boards.Add(board);
+        } // end method
+
+        public static Board? GetByBoardCode(string boardCode)
+        {
+            //
+            //Name             : Board? GetByBoardCode(string boardCode)
+            //Purpose          : Finds and returns the board matching the
+            //                   given board code
+            //Re-use           : None
+            //Input Parameters : string boardCode
+            //                   - the board code to search for
+            //Output Type      : Board?
+            //                   - the matching board if found, otherwise
+            //                     null
+            //
+            return boards.FirstOrDefault(b => b.BoardCode == boardCode);
+        } // end method
+
+        public static void RemoveBoard(string boardCode)
+        {
+            //
+            //Name             : void RemoveBoard(string boardCode)
+            //Purpose          : Removes the board matching the given
+            //                   board code from the repository
+            //Re-use           : GetByBoardCode()
+            //Input Parameters : string boardCode
+            //                   - the board code of the board to remove
+            //Output Type      : None
+            //
+            Board? board = GetByBoardCode(boardCode);
+            boards.Remove(board);
+        } // end method
+
+        public static void UpdateBoard(Board updatedBoard)
+        {
+            //
+            //Name             : void UpdateBoard(Board updatedBoard)
+            //Purpose          : Updates the Make, Model, FlashKb and Price
+            //                   of an existing board, found by board code.
+            //                   BoardCode itself is never updated, since
+            //                   it is the board's identity.
+            //Re-use           : GetByBoardCode()
+            //Input Parameters : Board updatedBoard
+            //                   - a board object containing the updated
+            //                     values
+            //Output Type      : None
+            //
+            Board? board = GetByBoardCode(updatedBoard.BoardCode);
+            board.Make = updatedBoard.Make;
+            board.Model = updatedBoard.Model;
+            board.FlashKb = updatedBoard.FlashKb;
+            board.Price = updatedBoard.Price;
         } // end method
     } // end class
 } // end namespace
